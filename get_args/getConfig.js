@@ -11,7 +11,7 @@ let getConfig = function() {
       let configIndex = options.indexOf(flags[0]) + 1;
       return options[configIndex];
     default :
-      process.stderr.write('The only one config is permitted');
+      process.stderr.write('Error: You provided -c argument more than once');
       process.exit(1);
   }
 }

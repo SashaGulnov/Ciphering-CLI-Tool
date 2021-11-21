@@ -17,7 +17,7 @@ let inputValidation = function () {
       fs.access(inputPath, fs.F_OK, (err) =>{
         if (err) {
           console.log(err)
-          process.stdout.write("input file doesn't exist or you don't have access");
+          process.stderr.write("input file doesn't exist or you don't have access");
           process.exit(1);
         }
       });
